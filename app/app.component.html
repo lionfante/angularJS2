@@ -1,5 +1,5 @@
 <h2>User Forms</h2>
-<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+<!--<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" minlength="6" maxlength="10" required name="name" #name="ngModel" ngModel />
@@ -30,4 +30,5 @@
         </div>
 
     <button type="submit" [disabled] = "!userForm.valid" class="btn btn-primary">Submit</button>
-</form>
+</form>-->
+<employee-list></employee-list>
