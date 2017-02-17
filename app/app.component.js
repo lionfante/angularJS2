@@ -9,6 +9,11 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'TEDU Online';
+        this.cities = [
+            { Id: '1', Name: 'HCM' },
+            { Id: '2', Name: 'Hà Nội' },
+            { Id: '3', Name: 'Huế' }
+        ];
     }
     AppComponent.prototype.onSubmit = function (value) {
         console.log(value);
