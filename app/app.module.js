@@ -11,6 +11,8 @@ var app_component_1 = require("./app.component");
 var forms_1 = require("@angular/forms");
 var employee_component_1 = require("./employee.component");
 var employee_detail_component_1 = require("./employee-detail.component");
+var employee_edit_component_1 = require("./employee-edit.component");
+var employee_add_component_1 = require("./employee-add.component");
 var employee_overview_component_1 = require("./employee-overview.component");
 var employee_projects_component_1 = require("./employee-projects.component");
 var employee_service_1 = require("./services/employee.service");
@@ -36,7 +38,9 @@ AppModule = __decorate([
             employee_detail_component_1.EmployeeDetailComponent,
             employee_overview_component_1.EmployeeOverviewComponent,
             employee_projects_component_1.EmployeeProjectsComponent,
-            login_component_1.LoginComponent
+            login_component_1.LoginComponent,
+            employee_edit_component_1.EmployeeEditComponent,
+            employee_add_component_1.EmployeeAddComponent
         ],
         providers: [employee_service_1.EmployeeService, login_service_1.LoginService, check_login_guard_1.CheckLoginGuard, check_save_form_guard_1.CheckSaveFormGuard],
         bootstrap: [app_component_1.AppComponent]

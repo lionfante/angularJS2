@@ -4,6 +4,8 @@ import { EmployeeListComponent } from './employee.component';
 import { EmployeeDetailComponent } from './employee-detail.component';
 import {EmployeeOverviewComponent} from './employee-overview.component';
 import {EmployeeProjectsComponent} from './employee-projects.component';
+import {EmployeeEditComponent} from './employee-edit.component';
+import {EmployeeAddComponent} from './employee-add.component';
 import { LoginComponent } from './login.component';
 import {CheckLoginGuard} from './guards/check-login.guard';
 import {CheckSaveFormGuard} from './guards/check-save-form.guard';
@@ -16,6 +18,9 @@ const routing: Routes = [
             {path:'overview', component: EmployeeOverviewComponent},
             {path:'projects', component: EmployeeProjectsComponent}
         ]},
+    { path: 'employee-edit/:id', component: EmployeeEditComponent },
+    { path: 'employee-add', component: EmployeeAddComponent },
     { path: 'login', component: LoginComponent },
+
 ]
 export const appRoutes = RouterModule.forRoot(routing);

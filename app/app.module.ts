@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {EmployeeListComponent} from './employee.component';
 import {EmployeeDetailComponent} from './employee-detail.component';
+import {EmployeeEditComponent} from './employee-edit.component';
+import {EmployeeAddComponent} from './employee-add.component';
 import {EmployeeOverviewComponent} from './employee-overview.component';
 import {EmployeeProjectsComponent} from './employee-projects.component';
 import { EmployeeService } from './services/employee.service';
@@ -23,7 +25,9 @@ import {appRoutes} from './app.routes';
                 EmployeeDetailComponent,
                 EmployeeOverviewComponent,
                 EmployeeProjectsComponent,
-                LoginComponent
+                LoginComponent,
+                EmployeeEditComponent,
+                EmployeeAddComponent
   ],
   providers: [EmployeeService, LoginService, CheckLoginGuard,CheckSaveFormGuard],
   bootstrap: [AppComponent]

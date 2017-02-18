@@ -1,3 +1,6 @@
+<div class="row">
+    <a [routerLink]="['/employee-add']">Thêm mới</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +20,7 @@
             <td>{{employee.status}}</td>
             <td>{{employee.createdAt | date}}</td>
             <td><a [routerLink]="['/employee-detail',employee.id]">Detail</a></td>
+            <td><a [routerLink]="['/employee-edit',employee.id]">Edit</a></td>
         </tr>
     </tbody>
 </table>

@@ -5,6 +5,8 @@ var employee_component_1 = require("./employee.component");
 var employee_detail_component_1 = require("./employee-detail.component");
 var employee_overview_component_1 = require("./employee-overview.component");
 var employee_projects_component_1 = require("./employee-projects.component");
+var employee_edit_component_1 = require("./employee-edit.component");
+var employee_add_component_1 = require("./employee-add.component");
 var login_component_1 = require("./login.component");
 var check_save_form_guard_1 = require("./guards/check-save-form.guard");
 var routing = [
@@ -16,6 +18,8 @@ var routing = [
             { path: 'overview', component: employee_overview_component_1.EmployeeOverviewComponent },
             { path: 'projects', component: employee_projects_component_1.EmployeeProjectsComponent }
         ] },
+    { path: 'employee-edit/:id', component: employee_edit_component_1.EmployeeEditComponent },
+    { path: 'employee-add', component: employee_add_component_1.EmployeeAddComponent },
     { path: 'login', component: login_component_1.LoginComponent },
 ];
 exports.appRoutes = router_1.RouterModule.forRoot(routing);
