@@ -15,6 +15,10 @@ var employee_overview_component_1 = require("./employee-overview.component");
 var employee_projects_component_1 = require("./employee-projects.component");
 var employee_service_1 = require("./services/employee.service");
 var home_component_1 = require("./home.component");
+var login_component_1 = require("./login.component");
+var login_service_1 = require("./services/login.service");
+var check_login_guard_1 = require("./guards/check-login.guard");
+var check_save_form_guard_1 = require("./guards/check-save-form.guard");
 var http_1 = require("@angular/http");
 var app_routes_1 = require("./app.routes");
 //Service có thể được import ở đây để dùng chung cho toàn module
@@ -31,9 +35,10 @@ AppModule = __decorate([
             home_component_1.HomeComponent,
             employee_detail_component_1.EmployeeDetailComponent,
             employee_overview_component_1.EmployeeOverviewComponent,
-            employee_projects_component_1.EmployeeProjectsComponent
+            employee_projects_component_1.EmployeeProjectsComponent,
+            login_component_1.LoginComponent
         ],
-        providers: [employee_service_1.EmployeeService],
+        providers: [employee_service_1.EmployeeService, login_service_1.LoginService, check_login_guard_1.CheckLoginGuard, check_save_form_guard_1.CheckSaveFormGuard],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

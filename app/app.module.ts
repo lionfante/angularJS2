@@ -8,6 +8,10 @@ import {EmployeeOverviewComponent} from './employee-overview.component';
 import {EmployeeProjectsComponent} from './employee-projects.component';
 import { EmployeeService } from './services/employee.service';
 import {HomeComponent} from './home.component';
+import {LoginComponent} from './login.component';
+import {LoginService} from './services/login.service';
+import {CheckLoginGuard} from './guards/check-login.guard';
+import {CheckSaveFormGuard} from './guards/check-save-form.guard';
 import {HttpModule} from '@angular/http';
 import {appRoutes} from './app.routes';
 //Service có thể được import ở đây để dùng chung cho toàn module
@@ -18,9 +22,10 @@ import {appRoutes} from './app.routes';
                 HomeComponent,
                 EmployeeDetailComponent,
                 EmployeeOverviewComponent,
-                EmployeeProjectsComponent
+                EmployeeProjectsComponent,
+                LoginComponent
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, LoginService, CheckLoginGuard,CheckSaveFormGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

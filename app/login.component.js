@@ -9,38 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var login_service_1 = require("./services/login.service");
 var router_1 = require("@angular/router");
-var AppComponent = (function () {
-    function AppComponent(router, _loginService) {
+var login_service_1 = require("./services/login.service");
+var LoginComponent = (function () {
+    function LoginComponent(router, loginService) {
         this.router = router;
-        this._loginService = _loginService;
-        this.title = 'TEDU Online';
-        this.cities = [
-            { Id: '1', Name: 'HCM' },
-            { Id: '2', Name: 'Hà Nội' },
-            { Id: '3', Name: 'Huế' }
-        ];
+        this.loginService = loginService;
     }
-    AppComponent.prototype.onSubmit = function (value) {
+    LoginComponent.prototype.CheckLogin = function (value) {
         console.log(value);
+        if (value.username == "admin" && value.password == "123") {
+            this.loginService.SetLogin(true);
+            this.router.navigate(['employees']);
+        }
+        else {
+            this.router.navigate(['/']);
+        }
     };
-    // ngOnInit(){
-    //   this._isLoggedIn = this._loginService.IsLogin();
-    // }
-    AppComponent.prototype.Logout = function () {
-        this._loginService.SetLogin(false);
-        this.router.navigate(['/']);
-    };
-    return AppComponent;
+    return LoginComponent;
 }());
-AppComponent = __decorate([
+LoginComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html',
-        styleUrls: ['app/app.component.css']
+        selector: 'login-component',
+        templateUrl: "./app/login.component.html"
     }),
     __metadata("design:paramtypes", [router_1.Router, login_service_1.LoginService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], LoginComponent);
+exports.LoginComponent = LoginComponent;
+//# sourceMappingURL=login.component.js.map
